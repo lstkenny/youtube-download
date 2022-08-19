@@ -1,6 +1,6 @@
 <?php
 
-namespace src\php;
+namespace App;
 
 class Input
 {

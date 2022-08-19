@@ -9,9 +9,9 @@ $youtube = new YouTubeDownloader();
 
 try {
     $downloadOptions = $youtube->getDownloadLinks("https://www.youtube.com/watch?v=JGLcDHbZqAE");
-    var_dump($downloadOptions);
-    if ($downloadOptions->getAllFormats()) {
-        echo $downloadOptions->getFirstCombinedFormat()->url;
+    if ($videos = $downloadOptions->getCombinedFormats()) {
+        $video = end($videos);
+        var_dump($video);
     } else {
         echo 'No links found';
     }

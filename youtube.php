@@ -1,7 +1,5 @@
 <?php
 
-include 'src/php/Autoloader.php';
+include 'vendor/autoload.php';
 
-use src\php;
-
-new php\Main;
+new App\Main;
